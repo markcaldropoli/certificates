@@ -1,34 +1,297 @@
-<html>
-    <head>
-        <!-- Favicon -->
-	    <link rel="shortcut icon" href="/mcfavicon.png" />
-	    <link rel="apple-touch-icon" sizes="57x57" href="/mcfavicon.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="/mcfavicon.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/mcfavicon.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/mcfavicon.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/mcfavicon.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/mcfavicon.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="/mcfavicon.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/mcfavicon.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="/mcfavicon.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="/mcfavicon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/mcfavicon.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="/mcfavicon.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/mcfavicon.png">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#050b10">
+    <meta name="description" content="Mark Caldropoli's ITIL 4 Foundation Certificate in IT Service Management.">
+    <link rel="icon" type="image/png" href="mcfavicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+    <title>Mark Caldropoli | Certificates</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            --page: #050b10;
+            --panel: #0c171e;
+            --ink: #e9f3f8;
+            --muted: #9aabb5;
+            --accent: #7ae6ff;
+            --line: rgb(233 243 248 / 12%);
+            font-family: Manrope, system-ui, sans-serif;
+            font-synthesis: none;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
 
-        <title>Mark Caldropoli - Certificates</title>
+        * { box-sizing: border-box; }
 
-        <!-- Google Analytics -->
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-96866156-1', 'auto');
-            ga('send', 'pageview');
-        </script>
-    </head>
-    <body background="pattern.png">
-        <center><iframe src="itil4foundation.pdf" width="850" height="830"></iframe></center>
-    </body>
+        body {
+            min-width: 320px;
+            min-height: 100vh;
+            margin: 0;
+            color: var(--ink);
+            background:
+                linear-gradient(90deg, transparent 49.8%, rgb(122 230 255 / 4%) 50%, transparent 50.2%) 0 0 / 180px 180px,
+                radial-gradient(ellipse at 82% 0%, rgb(46 200 255 / 10%), transparent 34%),
+                var(--page);
+        }
+
+        a { color: inherit; }
+
+        main {
+            width: min(100% - 48px, 1120px);
+            margin-inline: auto;
+        }
+
+        .site-header,
+        .site-footer {
+            width: 100%;
+            padding-inline: max(24px, calc((100% - 1120px) / 2));
+        }
+
+        .site-header {
+            min-height: 84px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--ink);
+            font-family: Sora, Manrope, sans-serif;
+            font-size: 0.94rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .brand-mark {
+            display: grid;
+            width: 36px;
+            aspect-ratio: 1;
+            place-items: center;
+            border: 1px solid rgb(122 230 255 / 42%);
+            border-radius: 6px;
+            color: var(--accent);
+            font-size: 0.75rem;
+        }
+
+        main { padding-block: 62px 56px; }
+
+        .intro {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 32px;
+            margin-bottom: 28px;
+        }
+
+        .eyebrow,
+        .viewer-label,
+        .viewer-format,
+        .detail-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.11em;
+            text-transform: uppercase;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            margin: 0 0 16px;
+            color: var(--accent);
+        }
+
+        .eyebrow::before {
+            width: 7px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 16px rgb(122 230 255 / 75%);
+            content: "";
+        }
+
+        h1 {
+            max-width: 23ch;
+            margin: 0;
+            font-family: Sora, Manrope, sans-serif;
+            font-size: 2.25rem;
+            font-weight: 600;
+            letter-spacing: 0;
+            line-height: 1.24;
+        }
+
+        .subtitle {
+            margin: 12px 0 0;
+            color: var(--muted);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .actions {
+            display: flex;
+            flex: 0 0 auto;
+            gap: 10px;
+        }
+
+        .action {
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 0 15px;
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            color: var(--ink);
+            background: rgb(255 255 255 / 3%);
+            font: 700 0.84rem Manrope, system-ui, sans-serif;
+            text-decoration: none;
+            transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
+        }
+
+        .action:hover {
+            transform: translateY(-1px);
+            border-color: rgb(122 230 255 / 55%);
+            background: rgb(122 230 255 / 7%);
+        }
+
+        .action-primary {
+            border-color: var(--accent);
+            color: #031017;
+            background: var(--accent);
+        }
+
+        .action-primary:hover {
+            border-color: #b4f1ff;
+            color: #031017;
+            background: #b4f1ff;
+        }
+
+        .viewer {
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--panel);
+            box-shadow: 0 28px 80px rgb(0 0 0 / 32%);
+        }
+
+        .viewer-header {
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding-inline: 16px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .viewer-label { color: var(--muted); }
+        .viewer-format { color: var(--accent); }
+
+        .pdf-frame {
+            display: block;
+            width: 100%;
+            height: min(1100px, max(680px, calc(100vh - 300px)));
+            border: 0;
+            background: #fff;
+        }
+
+        .site-footer {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            padding-block: 20px 28px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 0.78rem;
+        }
+
+        .site-footer a { text-decoration: none; }
+        .site-footer a:hover { color: var(--accent); }
+
+        @media (max-width: 760px) {
+            main { width: min(100% - 32px, 560px); }
+            .site-header,
+            .site-footer { padding-inline: 16px; }
+
+            .site-header { min-height: 72px; }
+            main { padding-block: 42px 38px; }
+
+            .intro {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            h1 { max-width: 18ch; font-size: 1.8rem; }
+            .actions { width: 100%; }
+            .action { flex: 1; }
+            .pdf-frame { height: max(68svh, 560px); }
+        }
+
+        @media (max-width: 420px) {
+            .brand { gap: 8px; font-size: 0.82rem; }
+            .brand-mark { width: 32px; }
+            h1 { font-size: 1.6rem; }
+            .action { padding-inline: 10px; font-size: 0.78rem; }
+            .pdf-frame { height: max(65svh, 520px); }
+            .site-footer { flex-direction: column; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="https://markcaldropoli.me/" aria-label="Mark Caldropoli home">
+            <span class="brand-mark" aria-hidden="true">MC</span>
+            <span>Mark Caldropoli</span>
+        </a>
+    </header>
+
+    <main>
+        <section class="intro" aria-labelledby="certificate-title">
+            <div>
+                <p class="eyebrow">Professional Certification</p>
+                <h1 id="certificate-title">ITIL Foundation Certificate in IT Service Management</h1>
+                <p class="subtitle">PeopleCert · AXELOS</p>
+            </div>
+            <div class="actions" aria-label="Certificate actions">
+                <a class="action action-primary" href="itil4foundation.pdf" target="_blank" rel="noopener">Open PDF <span aria-hidden="true">↗</span></a>
+                <a class="action" href="itil4foundation.pdf" download>Download PDF <span aria-hidden="true">↓</span></a>
+            </div>
+        </section>
+
+        <section class="viewer" aria-label="Certificate PDF preview">
+            <div class="viewer-header">
+                <span class="viewer-label">Certificate preview</span>
+                <span class="viewer-format">PDF · 1 page</span>
+            </div>
+            <iframe class="pdf-frame" src="itil4foundation.pdf#view=FitH" title="ITIL 4 Foundation Certificate for Mark Caldropoli">
+                <p>Your browser cannot display embedded PDFs. <a href="itil4foundation.pdf">Open the certificate PDF</a>.</p>
+            </iframe>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span>&copy; <span id="current-year"></span> Mark Caldropoli</span>
+        <a href="https://markcaldropoli.me/">markcaldropoli.me</a>
+    </footer>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
 </html>
